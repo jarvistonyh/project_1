@@ -1,0 +1,28 @@
+--- # CREATING OWN PLAYBOOK
+- hosts: devil
+  user: tony
+  become: true
+  connection: ssh
+  tasks:
+     - name: stopping the container
+       docker_container:
+           name: creating-container
+           state: stopped
+           
+     - name: removing the container
+       docker_container:
+           name: creating-container
+           state: absent
+           
+     - name: removing the docker image
+       docker_image:
+            name: wolverine2003/Firstproject-job
+            state: absent
+            
+     - name: creating the new container
+       docker_container:
+           name: creating-container
+           image: wolverine2003/Firstproject-job
+           state: started
+           ports:
+             -"9000:80"
