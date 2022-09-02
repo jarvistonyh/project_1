@@ -5,9 +5,9 @@ LABEL name="SUBHABRATA PANDA" \
 RUN yum update -y && \
     yum install vim unzip httpd  -y
 WORKDIR /var/www/html
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page275/hangover.zip /var/www/html/
-RUN unzip hangover.zip && \
-    cp -rvf hangover-master/* . && \
-    rm -rf hangover.zip
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page267/entro.zip /var/www/html/
+RUN unzip entro.zip && \
+    cp -rvf entro/* . && \
+    rm -rf entro.zip
 CMD ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
 EXPOSE 80
