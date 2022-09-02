@@ -12,4 +12,4 @@
            image: jarvistony/trial_job1:latest
            state: started
            ports:
-             - "9000:80"
+             - "9001:80"
