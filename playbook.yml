@@ -3,6 +3,8 @@
   user: root
   become: true
   connection: ssh
+  vars:
+    ansible_python_interpreter: /bin/python
   tasks:
      - name: stopping the container
        docker_container:
