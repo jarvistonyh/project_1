@@ -1,0 +1,13 @@
+--- # CREATING OWN PLAYBOOK
+- hosts: devil
+  user: root
+  become: true
+  connection: ssh
+  tasks:
+     - name: creating the new container
+       docker_container:
+           name: creating-container
+           image: jarvistony/trial_job1:latest
+           state: started
+           ports:
+             - "9000:80"
