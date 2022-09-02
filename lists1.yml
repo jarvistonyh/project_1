@@ -1,6 +1,6 @@
 --- # CREATING OWN PLAYBOOK
 - hosts: devil
-  user: root
+  user: tony
   become: true
   connection: ssh
   vars:
