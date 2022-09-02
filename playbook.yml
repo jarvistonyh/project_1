@@ -25,4 +25,4 @@
            image: wolverine2003/Firstproject-job
            state: started
            ports:
-             -"9000:80"
+             - "9000:80"
