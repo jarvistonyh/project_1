@@ -9,7 +9,7 @@
      - name: creating the new container
        docker_container:
            name: creating-container
-           image: jarvistony/trial_job1:latest
+           image: jarvistony/project1:latest
            state: started
            ports:
              - "9000:80"
