@@ -2,7 +2,6 @@
 - hosts: devil
   user: tony
   become: true
-  connection: ssh
   vars:
     ansible_python_interpreter: /bin/python
   tasks:
